@@ -19,7 +19,7 @@ export default function Navbar() {
           <Link href="/post">Post</Link>
         </li>
         <li>
-          <Link href="/"></Link>
+          <Link href="/rickandmortyapi">Caracters </Link>
         </li>
       </ul>
     </div>

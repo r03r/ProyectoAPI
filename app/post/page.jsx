@@ -6,13 +6,20 @@ async function LoadPoast() {
   }
   const data = await res.json();
   return data;
+  console.log(data);
 }
 
 async function Post() {
   const posts = await LoadPoast();
-  return posts.map((post) => (
-    <div key={post.id}>
-      <h3>{posts.title}</h3>
+  return posts.map((posts) => (
+    <div
+      className="bg-slate-500 text-slate-200 m-4 font-sans  items-center rounded-md justify-between  "
+      key={posts.id}
+    >
+      <h3 className="p-4">
+        {posts.id} .{posts.title}
+      </h3>
+      <br />
       <p>{posts.body}</p>
     </div>
   ));
