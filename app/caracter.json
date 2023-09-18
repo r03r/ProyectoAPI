@@ -1,0 +1,23 @@
+{
+    "id": 380,
+    "url": "https://rickandmortyapi.com/api/character/380",
+    "name": "Unknown Rick",
+    "created": "2018-01-10T19:44:22.262Z",
+    "status": "unknown",
+    "image": "https://rickandmortyapi.com/api/character/avatar/380.jpeg",
+    "species": "Human",
+    "type": "",
+    "gender": "Male",
+    "origin": {
+        "name": "unknown",
+        "url": ""
+    },
+    "location": {
+        "name": "unknown",
+        "url": ""
+    },
+    "episode": [
+        "https://rickandmortyapi.com/api/episode/22",
+        "https://rickandmortyapi.com/api/episode/51"
+    ]
+}

@@ -1,18 +1,31 @@
-import { Suspense } from "react";
+import Image from "next/image";
 
-async function getCharacters() {
-  try {
-    const res = await fetch("https://rickandmortyapi.com/api/character");
-    const data = await res.json();
-    return data;
-  } catch (error) {
-    console.log(error);
-    return { results: [] }; // retornar datos vacíos
-  }
+async function fetchData() {
+  const res = await fetch("https://rickandmortyapi.com/api/character");
+  const data = await res.json();
+  return data;
+  console.log(data);
 }
 
-export default function Characters() {
-  const data = getCharacters();
-
-  return;
+export default function character() {
+  return (
+    <div className="character">
+      <h1>Characters</h1>
+      <ul>
+        {fetchData().then((data) =>
+          data.results.map((character) => (
+            <>
+              <li key={character.id}>{character.name}</li>
+              <Image
+                src={character.image}
+                alt={character.name}
+                width={500}
+                height={500}
+              />
+            </>
+          ))
+        )}
+      </ul>
+    </div>
+  );
 }

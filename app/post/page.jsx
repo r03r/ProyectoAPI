@@ -6,7 +6,6 @@ async function LoadPoast() {
   }
   const data = await res.json();
   return data;
-  console.log(data);
 }
 
 async function Post() {

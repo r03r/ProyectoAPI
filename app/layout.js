@@ -1,9 +1,10 @@
-import Navbar from "../components/Navbar";
 import  './globals.css'
+import Navbar from 'components/Navbar.jsx'
+
 
 export const metadata = {
-  title: "crash Next 13.js",
-  description: " by Me.js",
+  title: "Desde Next 13.js",
+  description: " by R03",
 };
 
 
@@ -12,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en ">
       <body >
-        <Navbar className={'flex'} />
+        <Navbar />
         {children}
       </body>
     </html>
