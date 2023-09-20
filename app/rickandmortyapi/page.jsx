@@ -7,7 +7,7 @@ async function fetchData() {
   console.log(data);
 }
 
-export default function character() {
+export default function character({characters}) {
   return (
     <div className="character">
       <h1>Characters</h1>
@@ -19,8 +19,9 @@ export default function character() {
               <Image
                 src={character.image}
                 alt={character.name}
-                width={500}
-                height={500}
+                width={200}
+                height={200}
+          
               />
             </>
           ))
