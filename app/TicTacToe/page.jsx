@@ -11,16 +11,16 @@ function Square({ value, onSquareClick }) {
     </button>
   );
 }
-function Board(xIsNext, squares, onPlay) {
+function Board({ xIsNext, squares, onPlay }) {
   function handleClick(i) {
-    if ( calculateWinner(squares)|| squares[i]) {      //esto hace que no vulva a cambiar el cuadro a 0 o x || calculateWinner(squares)
+    if (calculateWinner(squares) || squares[i]) {
       return;
     }
     const nextSquares = squares.slice();
     if (xIsNext) {
-      nextSquares[i] = "X";
+      nextSquares[i] = 'X';
     } else {
-      nextSquares[i] = "O";
+      nextSquares[i] = 'O';
     }
     onPlay(nextSquares);
   }
@@ -28,9 +28,9 @@ function Board(xIsNext, squares, onPlay) {
   const winner = calculateWinner(squares);
   let status;
   if (winner) {
-    status = "Ganador: " + winner;
+    status = 'Ganador: ' + winner;
   } else {
-    status = "Siguiente jugador: " + (xIsNext ? "X" : "O");
+    status = 'Siguiente Jugador: ' + (xIsNext ? 'X' : 'O');
   }
 
   return (
@@ -51,25 +51,26 @@ function Board(xIsNext, squares, onPlay) {
 
 export default function Game() {
   const [xIsNext, setXIsNext] = useState(true);
-  const [history, setHistory] = useState([Array(9).fill(null)]);const [currentMove, setCurrentMove] = useState(0);
-
-  const currentSquares = history[history.length - 1];
+  const [history, setHistory] = useState([Array(9).fill(null)]);
+  const [currentMove, setCurrentMove] = useState(0);
+  const currentSquares = history[currentMove];
 
   function handlePlay(nextSquares) {
-    setHistory([...history, nextSquares]);
+    const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
+    setHistory(nextHistory);
+    setCurrentMove(nextHistory.length - 1);
     setXIsNext(!xIsNext);
-
-    // TODO
   }
+
   function jumpTo(nextMove) {
     setCurrentMove(nextMove);
     setXIsNext(nextMove % 2 === 0);
-
   }
+
   const moves = history.map((squares, move) => {
     let description;
     if (move > 0) {
-      description = 'Ir al movimiento #' + move;
+      description = 'Ir hacia la jugada #' + move;
     } else {
       description = 'Ir al inicio del juego';
     }
@@ -79,8 +80,6 @@ export default function Game() {
       </li>
     );
   });
-
-
 
   return (
     <div className="game">
