@@ -14,16 +14,17 @@ export default function character({characters}) {
       <ul>
         {fetchData().then((data) =>
           data.results.map((character) => (
-            <>
-              <li key={character.id}>{character.name}</li>
+            <span className="grid grid-cols-4 gap-4  ">
+              <li className="bg-blue-500 text-white p-4 rounded-md border-spacing-1 hover:bg-gray-400" key={character.id}>{character.name}
+              </li>
               <Image
                 src={character.image}
                 alt={character.name}
                 width={200}
                 height={200}
           
-              />
-            </>
+                />
+            </span>
           ))
         )}
       </ul>
