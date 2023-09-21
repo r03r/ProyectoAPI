@@ -14,7 +14,6 @@ function Square({ value, onSquareClick }) {
 function Board(xIsNext, squares, onPlay) {
   function handleClick(i) {
     if (squares[i] || calculateWinner(squares)) {      //esto hace que no vulva a cambiar el cuadro a 0 o x || calculateWinner(squares)
-
       return;
     }
     const nextSquares = squares.slice();
