@@ -13,7 +13,6 @@ export default function Navbar() {
         >
           Home
         </Link>
-
         <Link
           className="inline-block border border-blue-500 rounded py-2 px-4 bg-blue-500 
         hover:bg-blue-700 text-white
@@ -22,7 +21,6 @@ export default function Navbar() {
         >
           About
         </Link>
-
         <Link
           className="inline-block border border-blue-500 rounded py-2 px-4 bg-blue-500 
         hover:bg-blue-700 text-white
@@ -31,7 +29,6 @@ export default function Navbar() {
         >
           Tienda
         </Link>
-
         <Link
           className="inline-block border border-blue-500 rounded py-2 px-4 bg-blue-500 
         hover:bg-blue-700 text-white
@@ -40,7 +37,6 @@ export default function Navbar() {
         >
           Post
         </Link>
-
         <Link
           className="inline-block border border-blue-500 rounded py-2 px-4 bg-blue-500 
         hover:bg-blue-700 text-white
@@ -48,13 +44,22 @@ export default function Navbar() {
           href="/rickandmortyapi"
         >
           Rickandmorty
-        </Link> <Link
+        </Link>{" "}
+        <Link
           className="inline-block border border-blue-500 rounded py-2 px-4 bg-blue-500 
         hover:bg-blue-700 text-white
 "
           href="/TicTacToe"
         >
           TicTacToe
+        </Link>
+        <Link
+          className="inline-block border border-blue-500 rounded py-2 px-4 bg-blue-500 
+        hover:bg-blue-700 text-white
+"
+          href="/verduras"
+        >
+          Verduras
         </Link>
       </ul>
     </nav>
