@@ -3,12 +3,15 @@ import { useState } from "react";
 
 function Square({ value, onSquareClick }) {
   return (
+    <section className="grid grid-cols-3 gap-1 ">
     <button
-      onClick={onSquareClick}
-      className="text-white space-y-4 content-center flex-row bg-green-400 hover:bg-sky-800 border-2 border-green-600 m-3 p-5 rounded-lg "
+    onClick={onSquareClick}
+    className=" text-white bg-violet-600 border-amber-500 hover:bg-sky-800 border-2 rounded-lg  "
     >
       {value}
+      
     </button>
+      </section>
   );
 }
 function Board({ xIsNext, squares, onPlay }) {

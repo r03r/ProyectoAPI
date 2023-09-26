@@ -1,0 +1,89 @@
+
+{
+  "nombre": "Bard",
+  "tipo": "modelo de lenguaje grande",
+  "creador": "Google AI",
+  "lenguaje": "inglés",
+  "tamaño":"1,37T", 
+  "capacidades": [
+    "generar texto",
+    "traducir idiomas",
+    "escribir diferentes tipos de contenido creativo",
+    "responder a preguntas de forma informativa"
+  ],
+  "fuentes de datos": [
+    "un conjunto de datos de texto y código de más de 1,56T palabras",
+    "un conjunto de datos de preguntas y respuestas de más de 300B palabras"
+  ],
+  "estado actual": "en desarrollo",
+  "futuro": [
+    "mejorar la precisión y la eficiencia",
+    "aprender a realizar tareas más complejas",
+    "ser más accesible a todos"
+  ],
+  "paises": [
+    {
+      "nombre": "España",
+      "capital": "Madrid",
+      "población": "47,33 millones",
+      "superficie": "504.782 km²",
+      "idioma oficial": "español"
+    },
+    {
+      "nombre": "Francia",
+      "capital": "París",
+      "población": "67,02 millones",
+      "superficie": "547.030 km²",
+      "idioma oficial": "francés"
+    },
+    {
+      "nombre": "Alemania",
+      "capital": "Berlín",
+      "población": "83,25 millones",
+      "superficie": "357.022 km²",
+      "idioma oficial": "alemán"
+    },
+    {
+      "nombre": "Italia",
+      "capital": "Roma",
+      "población": "60,46 millones",
+      "superficie": "301.336 km²",
+      "idioma oficial": "italiano"
+    }
+  ],
+  "continentes": [
+    {
+      "nombre": "Europa",
+      "países": [
+        "España",
+        "Francia",
+        "Alemania",
+        "Italia"
+      ]
+    },
+    {
+      "nombre": "África",
+      "países": [
+        "Marruecos",
+        "Argelia",
+        "Túnez"
+      ]
+    },
+    {
+      "nombre": "Asia",
+      "países": [
+        "China",
+        "India",
+        "Japón"
+      ]
+    },
+    {
+      "nombre": "América",
+      "países": [
+        "Estados Unidos",
+        "México",
+        "Brasil"
+      ]
+    }
+  ]
+}
